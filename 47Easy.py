@@ -12,10 +12,11 @@ and sell it at 10 dollars.
 def solution(prices):
     lowest = prices[0]
     res = 0
-    if p < lowest:
-        lowest = p
     for p in prices:
+        if p < lowest:
+            lowest = p
         res = max(res, p-lowest)
+
     return res
 
 print(solution([9, 11, 8, 5, 7, 10]))
